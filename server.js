@@ -1,11 +1,6 @@
-const http = require('http')
-const server = http.createServer((request,response) => {
-    response.writeHead(200, {'Content-Type':'text/html'})
-    if(request.url === '/about'){
-        response.write('<h1>About Node.js</h1>')
-    }else{
-        response.write('<h1>Hello from Node.js</h1>')
-    }
-    response.end();
-})
-server.listen(1337)
+var http = require('http');
+var port = process.env.port || 1337;
+http.createServer(function (req, res) {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Hello World\n');
+}).listen(port);
