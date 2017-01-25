@@ -6,6 +6,6 @@ http.createServer(function (req, res) {
 		res.end('You in page from Sobre.....');
 	}
 	else{
-		res.end('Hello World. João\n');
+		res.end('Hello World.\n');
 	}
 }).listen(port);
