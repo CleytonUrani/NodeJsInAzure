@@ -2,8 +2,15 @@ var port = process.env.port || 1337;
 var express = require('express');
 var app = express();
 
+var http=require('http');
+var jsdom=require('jsdom');
+var $=require('jquery')(jsdom.jsdom().createWindow());
+
+
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.send(
+    $('<b>').text('Jquery node.js')
+  );
 });
 
 app.get('/sobre', function (req, res) {
