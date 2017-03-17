@@ -9,7 +9,7 @@ var $=require('jquery')(jsdom.jsdom().createWindow());
 
 app.get('/', function (req, res) {
   res.send(
-    $('<b>').text('Jquery node.js')
+    $.('<b>').text('Jquery node.js')
   );
 });
 
