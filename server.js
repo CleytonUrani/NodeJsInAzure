@@ -1,12 +1,15 @@
-var http = require('http');
 var port = process.env.port || 1337;
+var express = require('express');
+var app = express();
 
-http.createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-    if(req.url === '/sobre'){
-		res.end('Sobre....');
-	}
-	else{
-		res.end('<p>Hello World</p>');
-	}
-}).listen(port);
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
+
+app.get('/sobre', function (req, res) {
+  res.send('Sobre....');
+});
+
+app.listen(port, function () {
+  console.log('Example app listening on port ' + port);
+});
