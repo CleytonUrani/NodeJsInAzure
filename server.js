@@ -1,6 +1,7 @@
 var port = process.env.port || 1337;
 var express = require('express');
 var app = express();
+app.use(express.static(_dirname));
 
 //var http=require('http');
 //var jsdom=require('jsdom');
@@ -15,6 +16,10 @@ app.get('/', function (req, res) {
 
 app.get('/sobre', function (req, res) {
   res.send('Sobre....');
+});
+
+app.get('/select', function (req, res) {
+  
 });
 
 app.listen(port, function () {
