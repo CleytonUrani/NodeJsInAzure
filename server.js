@@ -7,10 +7,10 @@ function resposta (res){
 };
 
 app.get('/', function (req, res) {
+  resposta(res);
   res.send(
     'Jquery node.js + Express'
   );
-  resposta(res);
 });
 
 app.get('/sobre', function (req, res) {
