@@ -12,6 +12,10 @@ app.get('/sobre', function (req, res) {
   res.send('Sobre....');
 });
 
+app.get('/maqsis', function (req, res) {
+  res.send('maqsis....');
+});
+
 app.listen(port, function () {
   console.log('Rodando na porta: ' + port);
 });
