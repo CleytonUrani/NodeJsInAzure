@@ -1,4 +1,4 @@
-var port = process.env.Port || 1337;
+var port = 1337;
 var express = require('express');
 var app = express();
 
