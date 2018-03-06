@@ -1,10 +1,10 @@
-var port = process.env.port || 1337;
+var port = process.env.Port || 1337;
 var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
   res.send(
-    'Jquery node.js + Express'
+    'Jquery node.js + Express' + port
   );
 });
 
