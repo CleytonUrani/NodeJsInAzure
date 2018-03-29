@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/sobre', function (req, res) {
-  res.send('Sobre....jhgj');
+  res.send('Sobre....');
 });
 
 app.listen(port, function () {
