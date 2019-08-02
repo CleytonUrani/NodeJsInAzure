@@ -4,7 +4,7 @@ var app = express();
 
 app.get('/', function (req, res) {
   res.send(
-    'Node.js + Express' + port
+    'Node.js + Express'
   );
 });
 
